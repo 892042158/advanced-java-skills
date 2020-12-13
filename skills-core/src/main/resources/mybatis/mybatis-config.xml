@@ -1,3 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
 <configuration>
     <typeAliases>
         <typeAlias alias="Integer" type="java.lang.Integer"/>
@@ -9,6 +14,10 @@
     </typeAliases>
 
 
+    <plugins>
+        <!-- 自定义拦截器  学习时开放-->
+        <plugin interceptor="top.xmindguoguo.skills.demo.mybatis.ext.SqlInterceptor"/>
+    </plugins>
 
 
 </configuration>

@@ -88,6 +88,12 @@ public interface TSystemUserMapper {
      */
     List<TSystemUserModel> selectBatchIds(@Param("idCollection") Collection<? extends Serializable> idCollection);
 
+    /**
+     * @return
+     */
+    List<TSystemUserModel> selectList();
+
+
 }
 
 

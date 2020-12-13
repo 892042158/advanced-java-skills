@@ -3,7 +3,7 @@ package top.xmindguoguo.skills.demo.mybatis.mapper;
 import org.junit.Assert;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import top.xmindguoguo.skills.SkillsCoreApplicationTest;
+import top.xmindguoguo.skills.ApplicationSuperTest;
 import top.xmindguoguo.skills.demo.mybatis.model.TSystemUserModel;
 
 import java.util.ArrayList;
@@ -18,7 +18,7 @@ import java.util.List;
  * @Date: 2020/12/13 0:30
  * @Version: v1.0
  */
-public class TSystemUserMapperTest extends SkillsCoreApplicationTest {
+public class TSystemUserMapperTest extends ApplicationSuperTest {
     @Autowired
     TSystemUserMapper mapper;
 

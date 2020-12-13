@@ -105,5 +105,10 @@
             #{id}
         </foreach>
     </select>
+    <select id="selectList" resultMap="BaseResultMap">
+        SELECT
+        <include refid="Base_Column_List"/>
+        FROM t_system_user
+    </select>
 
 </mapper>
