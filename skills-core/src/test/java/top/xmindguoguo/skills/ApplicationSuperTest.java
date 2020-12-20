@@ -2,6 +2,7 @@ package top.xmindguoguo.skills;
 
 
 import com.alibaba.fastjson.JSON;
+import lombok.extern.slf4j.Slf4j;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
@@ -15,12 +16,19 @@ import org.springframework.test.context.junit4.SpringRunner;
  */
 @RunWith(SpringRunner.class)
 @SpringBootTest
+@Slf4j
 public class ApplicationSuperTest {
 
-    public void print(Object o) {
-        System.err.println("====print===========");
-        System.err.println(JSON.toJSONString(o));
-        System.err.println("=====print==========");
+    public void printJSONString(Object o) {
+        log.info("====printObj===========");
+        log.info(JSON.toJSONString(o));
+        log.info("=====printObj==========");
 
+    }
+
+    public void print(Object o) {
+        log.info("====print===========");
+        log.info(String.valueOf(o));
+        log.info("=====print==========");
     }
 }

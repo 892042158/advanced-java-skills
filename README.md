@@ -9,6 +9,8 @@
 3.同步博客于[博客](https://blog.csdn.net/mengxiangxingdong)<br/>
 
 ## 约定
+### 0.拒绝封装工具类
+ 既然是学习，所以尽量都用原生的，在实际开发中再用项目的工具类相关
 ### 1.包名称约定
 #### src.main.java<br/>
 1.top.xmindguoguo.skills.config 存储对应的开源技术的配置<br/>
@@ -18,10 +20,8 @@
 
 #### src.main.resources
 
-
 #### test.main.java
 测试类统一为 xxTest
-
 
 
 ### 2.代码存放约定
