@@ -12,6 +12,7 @@ import top.xmindguoguo.skills.demo.jackson.model.JsonClassAnnotationTestModel;
 
 import java.io.IOException;
 import java.util.Date;
+import java.util.Random;
 
 /**
  * @ClassName: JacksonMainTest
@@ -301,6 +302,21 @@ public class JacksonMainTest {
 
     @Test
     public void testJsonPOJOBuilder() {
+        String insertSql = "insert into demo_sc (sno,cno,score) values ";
+        String values = "";
+        for (int i = 0; i < 9; i++) {
+            for (int j = 0; j < 9; j++) {
+                values += "(" + i + ",100" + j + "," + getRandomScore() + "), \r\n";
+            }
+        }
+        System.err.println(insertSql + values);
+//        log.info(insertSql + values);
+    }
+
+    Random random = new Random();
+
+    public int getRandomScore() {
+        return random.nextInt(40) + 60;
     }
 
 
