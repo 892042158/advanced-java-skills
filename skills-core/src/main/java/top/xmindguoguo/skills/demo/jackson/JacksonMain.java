@@ -1,5 +1,9 @@
 package top.xmindguoguo.skills.demo.jackson;
 
+import org.junit.Test;
+
+import java.util.Random;
+
 /**
  * @ClassName: JacksonMain
  * @author: 于国帅
@@ -8,4 +12,6 @@ package top.xmindguoguo.skills.demo.jackson;
  * @Version: v1.0
  */
 public class JacksonMain {
+
+
 }
