@@ -1,52 +1,40 @@
 package jdk.util;
 
-import java.util.ArrayList;
+import lombok.extern.slf4j.Slf4j;
+import org.junit.Test;
+
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Spliterator;
 import java.util.stream.IntStream;
 
-import org.apache.commons.lang.StringUtils;
-import org.junit.Test;
-
 /**
- * 1.有返回值的方法不能直接测试
- * 
- * 2.带参数的方法不能直接测试
- * 
- * 3.访问权限在public一下的方法不能直接测试
- * 
- * 4.static静态方法不能直接测试
- * 
- * 5.不能给出现前四个条件中任意一个的方法添加@Test注解，否则执行满足@Test条件的方法也会出现initializationerror初始化异常 --------------------- 作者：Java仗剑走天涯 来源：CSDN
- * 原文：https://blog.csdn.net/baidu_37107022/article/details/73658343 版权声明：本文为博主原创文章，转载请附上博文链接！
- * 
- * @ClassName ArraysTest
  * @author <a href="892042158@qq.com" target="_blank">于国帅</a>
+ * @ClassName ArraysTest
  * @date 2019年1月21日 上午10:39:39
- *
+ * @see https://www.yiibai.com/java/util/collections_checkedcollection.html
  */
+@Slf4j
 public class ArraysTest {
     // 将任意数组以“,” 拼接转变成字符串
     @Test
     public void testToString() {
-        String[] strs = new String[] { "22", "sadas", "23dwd", "21ea" };
-        System.err.println(Arrays.toString(strs));
-        List<String> strsList = new ArrayList<>();
-        strsList.add("222");
-//        System.err.println(strsList.get("222"));  //发现报错
-        System.err.println(Arrays.binarySearch(strsList.toArray(), "222"));
-        StringUtils.join(strs, ",");
+        String[] strs = new String[]{"22", "sadas", "23dwd", "21ea"};
+        log.info(Arrays.toString(strs));
     }
 
     // 将任意数组及其子元素以“,” 拼接转变成字符串
     @Test
     public void deepToString() {
-        int[][] stuGrades = { { 80, 81, 82 }, { 84, 85, 86 }, { 87, 88, 89 } };
-        System.out.println(Arrays.deepToString(stuGrades));
+        int[][] stuGrades = {{80, 81, 82}, {84, 85, 86}, {87, 88, 89}};
+        log.info(Arrays.deepToString(stuGrades));
     }
 
+    /**
+     * 将数组变为list
+     * 注意这个ArrayList 是不可变的list  不能够添加和删除的
+     */
     @Test
     public void asList() {
         List<String> stooges = Arrays.asList("Larry", "Moe", "Curly");
@@ -56,15 +44,16 @@ public class ArraysTest {
 //        stooges.add("22"); // java.lang.UnsupportedOperationException
     }
 
-    // 使用二进制搜索算法搜索指定对象的所在数组的索引，如果不存在返回 -1 看api可以发现 基本类型，Object。T 囊括了各大类型
+/*    // 使用二进制搜索算法搜索指定对象的所在数组的索引，如果不存在返回 -1 看api可以发现 基本类型，Object。T 囊括了各大类型
     // 支持从一个数组查找一个key，也可以指定一个数组从索引x到索引y 的范围内查找
     // binarySearch(Object[] a, int fromIndex, int toIndex, Object key)
     // binarySearch(Object[] a, Object key)
+   */
     @Test
     public void binarySearch() {
         // 我们简单测试一下Obect的
-        Object[] objs = new Object[] { "name", 2, 3L, "dsadda" }; // 测试发现爆类型转换错误，实际还是需要 类型一致啊
-        objs = new Object[] { "name", "dsadda" };
+        Object[] objs = new Object[]{"name", 2, 3L, "dsadda"}; // 测试发现爆类型转换错误，实际还是需要 类型一致啊
+        objs = new Object[]{"name", "dsadda"};
         Object obj = "name";
         System.err.println(Arrays.binarySearch(objs, obj));
 
@@ -75,12 +64,13 @@ public class ArraysTest {
         // 原来是采用 数组的Comparable 比较的，然后 源码注释存在这句 -数代表 // key not found.
     }
 
-    // 复制指定的数组，使用空值截断或填充（如有必要），以使副本具有指定的长度。对于在原始数组和副本中都有效的所有索引，这两个数组将包含相同的值。对于在副本中有效但不在原始副本中的任何索引，副本将包含null。当且仅当指定的长度大于原始数组的长度时，这些索引才会存在。生成的数组与原始数组完全相同。
+/*    // 复制指定的数组，使用空值截断或填充（如有必要），以使副本具有指定的长度。对于在原始数组和副本中都有效的所有索引，这两个数组将包含相同的值。
+        对于在副本中有效但不在原始副本中的任何索引，副本将包含null。当且仅当指定的长度大于原始数组的长度时，这些索引才会存在。生成的数组与原始数组完全相同。
     // 代码可知，数组拷贝时调用的是本地方法 System.arraycopy() ；
-    // Arrays.copyOf()方法返回的数组是新的数组对象，原数组对象仍是原数组对象，不变
+    // Arrays.copyOf()方法返回的数组是新的数组对象，原数组对象仍是原数组对象，不变*/
     @Test
     public void copyOf() {
-        String[] strs = new String[] { "22", "sadas", "23dwd", "21ea" };
+        String[] strs = new String[]{"22", "sadas", "23dwd", "21ea"};
         String[] strs2 = Arrays.copyOf(strs, strs.length);
         System.err.println(Arrays.toString(strs2)); // 我们发现完全的复制了
         // 那么他们两个的指向的内存地址是否一致呢，是否复制了改变一个另一个也会发生改变呢？
@@ -99,7 +89,7 @@ public class ArraysTest {
         String[] strs5 = Arrays.copyOf(strs, strs.length + 3, strs.getClass()); // 上边的代码本质是实际也是调用这种代码
         System.err.println(Arrays.toString(strs5)); //
         // 我猜想一下复制二维数组会怎么样呢？
-        int[][] stuGrades = { { 80, 81, 82 }, { 84, 85, 86 }, { 87, 88, 89 } };
+        int[][] stuGrades = {{80, 81, 82}, {84, 85, 86}, {87, 88, 89}};
 
 //        int[][] stuGrades2  = (int[][]) Arrays.copyOf(strs, strs.length - 1);   //我们发现直接报编译错误了
 
@@ -108,7 +98,7 @@ public class ArraysTest {
     // 和上面的copyOf 一样，只不过是指定数组的指定范围进行copy
     @Test
     public void copyOfRange() {
-        String[] strs = new String[] { "22", "sadas", "23dwd", "21ea" };
+        String[] strs = new String[]{"22", "sadas", "23dwd", "21ea"};
         // copy 索引1,2两个元素
         String[] strs2 = Arrays.copyOfRange(strs, 1, 2); // [sadas]
         System.err.println(Arrays.toString(strs2));
@@ -136,9 +126,9 @@ public class ArraysTest {
     // 如果两个指定的数组彼此非常相等，则返回true。
     @Test
     public void testEquals() {
-        int[] ints = { 1, 2, 3, 6 };
-        int[] ints2 = { 1, 2, 3, 6 };
-        int[] ints3 = { 1, 2, 3 };
+        int[] ints = {1, 2, 3, 6};
+        int[] ints2 = {1, 2, 3, 6};
+        int[] ints3 = {1, 2, 3};
         System.out.println(Arrays.equals(ints, ints2)); // true
         System.out.println(Arrays.equals(ints, ints3)); // false
 
@@ -146,17 +136,17 @@ public class ArraysTest {
 
     }
 
-//如果两个指定的数组深层次彼此非常相等，则返回true。
+    //如果两个指定的数组深层次彼此非常相等，则返回true。
     @Test
     public void deepEquals() {
-        String[] name1 = { "G", "a", "o", "H", "u", "a", "n", "j", "i", "e" };
-        String[] name2 = { "G", "a", "o", "H", "u", "a", "n", "j", "i", "e" };
+        String[] name1 = {"G", "a", "o", "H", "u", "a", "n", "j", "i", "e"};
+        String[] name2 = {"G", "a", "o", "H", "u", "a", "n", "j", "i", "e"};
         System.out.println(Arrays.equals(name1, name2)); // true
         System.out.println(Arrays.deepEquals(name1, name2)); // true
 
         // 改变顺序
-        String[][] name12 = { { "G", "a", "o" }, { "H", "u", "a", "n" }, { "j", "i", "e" } };
-        String[][] name22 = { { "G", "a", "o" }, { "H", "u", "a", "n" }, { "j", "i", "e" } };
+        String[][] name12 = {{"G", "a", "o"}, {"H", "u", "a", "n"}, {"j", "i", "e"}};
+        String[][] name22 = {{"G", "a", "o"}, {"H", "u", "a", "n"}, {"j", "i", "e"}};
 
         System.out.println(Arrays.equals(name12, name22)); // false
         System.out.println(Arrays.deepEquals(name12, name22));// true
@@ -164,14 +154,14 @@ public class ArraysTest {
 
     @Test
     public void testHashCode() {
-        int[] ints = { 1, 2, 3, 6 };
+        int[] ints = {1, 2, 3, 6};
         System.out.println(Arrays.hashCode(ints)); // 955333
     }
 
     // 根据指定数组的“深层内容”返回哈希码。
     @Test
     public void deepHashCode() {
-        Object[] name1 = { "G", "a", "o", "H", "u", "a", "n", "j", "i", "e" };
+        Object[] name1 = {"G", "a", "o", "H", "u", "a", "n", "j", "i", "e"};
         System.out.println(Arrays.deepHashCode(name1)); // 1002816792
     }
 
@@ -179,7 +169,7 @@ public class ArraysTest {
     // 或者指定比较器进行数据顺序比较
     @Test
     public void sort() {
-        Integer[] values2 = { 1, 3, 432, 445, 2, 116 };
+        Integer[] values2 = {1, 3, 432, 445, 2, 116};
         Arrays.sort(values2);
         System.err.println(Arrays.toString(values2)); // [1, 2, 3, 116, 432, 445]
         // 使用 Comparator，改为倒序排序
@@ -204,7 +194,7 @@ public class ArraysTest {
     // 一个数组全部做表达式操作 一个数组的所有的元素都被表达式操作对应的数据
     @Test
     public void setAll() {
-        int[] values2 = { 1, 2, 3, 4, 5, 6 };
+        int[] values2 = {1, 2, 3, 4, 5, 6};
         Arrays.setAll(values2, x -> x + 10);
         System.err.println(Arrays.toString(values2));
     }
@@ -212,7 +202,7 @@ public class ArraysTest {
     // 将数组转为流式，对array进行流式处理，可用一切流式处理的方法
     @Test
     public void stream() {
-        int[] values2 = { 1, 2, 3, 4, 5, 6 };
+        int[] values2 = {1, 2, 3, 4, 5, 6};
         IntStream intStream = Arrays.stream(values2);
         // 查找所有大于3的元素，并且倒序输出
         values2 = intStream.filter(x -> x > 3).sorted().toArray(); // 必须一次性操作完毕，否则会报流已经关闭
@@ -220,7 +210,7 @@ public class ArraysTest {
         System.err.println(Arrays.toString(values2));
     }
 
-//============================================根据参考资料  以下的就全部都是有关于多线程的了   parallel===================================================
+    //============================================根据参考资料  以下的就全部都是有关于多线程的了   parallel===================================================
     // parallelPrefix(double[] array,DoubleBinaryOperator op)
     // DoubleBinaryOperator 这个是jdk8新增的函数调用接口在java8
     // 根据传递的函数接口实现，对应的元素依次进行计算 二元迭代，对原数组内容进行二元操作
@@ -230,11 +220,11 @@ public class ArraysTest {
         /*
          *下面的计算依然可以并行完成，在log(n)步之后，处理完毕，如果有足够的处理器，它的性能要好过线性运算
          */
-        int[] values2 = { 1, 2, 3, 4, 5, 6 };
+        int[] values2 = {1, 2, 3, 4, 5, 6};
         // 执行了 1*2 ，1*2*3 数组计算
         Arrays.parallelPrefix(values2, (x, y) -> x * y);// [1, 2, 6, 24, 120, 720]
         System.err.println(Arrays.toString(values2));
-        int[] values = { 1, 2, 3, 4, 5, 6 };
+        int[] values = {1, 2, 3, 4, 5, 6};
         // 运行这一行
         Arrays.parallelPrefix(values, 2, 4, (x, y) -> x * y);// [1, 2, 3, 12, 5, 6]
         // 我们发现结果只对 索引 3 发生了改变 ，也就是说 他的计算是从fromIndex 开始 到toIndex结束
@@ -252,21 +242,21 @@ public class ArraysTest {
     // 一个数组全部做表达式操作
     @Test
     public void parallelSetAll() {
-        int[] values2 = { 1, 2, 3, 4, 5, 6 };
+        int[] values2 = {1, 2, 3, 4, 5, 6};
         // 同样是并行计算，我们发现，他只是对数组的每个元素进行lambda处理，而不是迭代处理
         Arrays.parallelSetAll(values2, (x -> x * 10));
         System.err.println(Arrays.toString(values2)); // [0, 10, 20, 30, 40, 50]
         // 这是为啥呢？怎么最后一个元素丢了，那个0是什么梗？
         // 根据源码探索之后，才知道 原来这个流 传递的参数不是当前数组的元素，而是当前数组的索引
         // 如果想每个元素* 10 需要这样操作
-        int[] values = { 1, 2, 3, 4, 5, 6 };
+        int[] values = {1, 2, 3, 4, 5, 6};
         Arrays.parallelSetAll(values, (x -> values[x] * 10));
         System.err.println(Arrays.toString(values)); // [10, 20, 30, 40, 50, 60]
     }
 
     @Test
     public void parallelSort() {
-        Integer[] values2 = { 1, 3, 432, 445, 2, 116 };
+        Integer[] values2 = {1, 3, 432, 445, 2, 116};
         Arrays.parallelSort(values2);
         System.err.println(Arrays.toString(values2)); // [1, 2, 3, 116, 432, 445]
         // 这里比较奇怪的是 同时调用默认排序和 这个多线程排序 就会存在问题 暂定
@@ -295,7 +285,7 @@ public class ArraysTest {
     // https://www.baidu.com/link?url=7IGPIX6DtqtisP4eUHsGIjMtBngkcmnXEtn6Rdb2JacxFlWB6ot2q80luElh4eiqAUXxP5ScLNCrVObdLFX3k9Nk7s9yqEicspnQ52U7QzO&wd=&eqid=a1a8d32c00046abb000000045c455d11
     @Test
     public void spliterator() {
-        Integer[] values2 = { 1, 3, 432, 445, 2, 116 };
+        Integer[] values2 = {1, 3, 432, 445, 2, 116};
         // 转变成迭代器返回回来
         Spliterator<Integer> spliterator = Arrays.spliterator(values2);
         spliterator.forEachRemaining(a -> System.out.print(a + " "));
