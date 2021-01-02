@@ -1,13 +1,11 @@
-package top.xmindguoguo.skills.demo.jackson.model;
+package top.xmindguoguo.jackson.model;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.PropertyNamingStrategy;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
-import com.fasterxml.jackson.databind.annotation.JsonNaming;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import lombok.Data;
-import top.xmindguoguo.skills.demo.jackson.ext.DateJsonDeserializer;
-import top.xmindguoguo.skills.demo.jackson.ext.DateJsonSerializer;
+import top.xmindguoguo.jackson.ext.DateJsonDeserializer;
+import top.xmindguoguo.jackson.ext.DateJsonSerializer;
 
 import java.util.Date;
 

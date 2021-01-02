@@ -1,8 +1,4 @@
-package top.xmindguoguo.skills.demo.jackson;
-
-import org.junit.Test;
-
-import java.util.Random;
+package top.xmindguoguo.jackson;
 
 /**
  * @ClassName: JacksonMain

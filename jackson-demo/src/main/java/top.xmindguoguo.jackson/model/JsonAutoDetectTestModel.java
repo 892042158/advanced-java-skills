@@ -1,4 +1,4 @@
-package top.xmindguoguo.skills.demo.jackson.model;
+package top.xmindguoguo.jackson.model;
 
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 

@@ -1,4 +1,4 @@
-package top.xmindguoguo.skills.demo.jackson.ext;
+package top.xmindguoguo.jackson.ext;
 
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.core.JsonProcessingException;

@@ -1,14 +1,12 @@
-package top.xmindguoguo.skills.demo.jackson;
+package top.xmindguoguo.jackson;
 
-import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.annotation.JsonNaming;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
-import top.xmindguoguo.skills.demo.jackson.model.JacksonTestModel;
-import top.xmindguoguo.skills.demo.jackson.model.JsonAutoDetectTestModel;
-import top.xmindguoguo.skills.demo.jackson.model.JsonClassAnnotationTestModel;
+import top.xmindguoguo.jackson.model.JacksonTestModel;
+import top.xmindguoguo.jackson.model.JsonAutoDetectTestModel;
+import top.xmindguoguo.jackson.model.JsonClassAnnotationTestModel;
 
 import java.io.IOException;
 import java.util.Date;
