@@ -1,12 +1,12 @@
 package jdk.io;
 
+import org.junit.Test;
+
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Random;
-
-import org.junit.Test;
 
 public class FileTest {
     String str1 = "G:\\AA";
@@ -96,7 +96,6 @@ public class FileTest {
         try {
             file.createNewFile();
         } catch (IOException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         }
     }

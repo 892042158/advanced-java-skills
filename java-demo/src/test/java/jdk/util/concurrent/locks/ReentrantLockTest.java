@@ -15,7 +15,7 @@ public class ReentrantLockTest {
     Lock lock = new ReentrantLock();
     int count = 0;
 
-//    //错误的
+    //    //错误的
 //    public int countSum() {
 //        return ++count;
 //    }
@@ -29,7 +29,6 @@ public class ReentrantLockTest {
 //            lock.lock();
 //            return ++count;
 //        } catch (Exception e) {
-//            // TODO: handle exception
 //        } finally {
 //            lock.unlock();
 //        }
@@ -98,7 +97,6 @@ class InteriorUtil {
             pkid = System.currentTimeMillis();
             ++pkid;
         } catch (Exception e) {
-            // TODO: handle exception
         } finally {
             lock.unlock();
         }
