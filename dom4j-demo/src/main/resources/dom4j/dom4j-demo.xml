@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<students>
+    <student number="ITCAST_1001">
+        <name>zhangSan</name>
+        <age>23</age>
+        <sex>male</sex>
+    </student>
+</students>

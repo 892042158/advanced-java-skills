@@ -13,6 +13,10 @@
         <module>jackson-demo</module>
         <module>java-demo</module>
         <module>common-utils</module>
+        <module>webmagic-demo</module>
+        <module>commons-fileupload-demo</module>
+        <module>dom4j-demo</module>
+        <module>fastjson-demo</module>
     </modules>
 
 
