@@ -8,4 +8,11 @@ package top.xmindguoguo.fastjson;
  * @Version: v1.0
  */
 public class FastjsonMain {
+
+    /**
+     *
+     * 1.fastjson的使用
+     * 2.大文件的处理
+     *
+     */
 }

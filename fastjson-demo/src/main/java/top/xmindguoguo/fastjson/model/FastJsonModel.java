@@ -1,7 +1,9 @@
 package top.xmindguoguo.fastjson.model;
 
 import com.alibaba.fastjson.annotation.JSONField;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
 import java.util.Date;
@@ -15,6 +17,8 @@ import java.util.List;
  * @Version: v1.0
  */
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class FastJsonModel implements Serializable {
     private Integer testInteger;
     private Long testLong;
