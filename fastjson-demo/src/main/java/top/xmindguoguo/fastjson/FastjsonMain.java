@@ -10,9 +10,10 @@ package top.xmindguoguo.fastjson;
 public class FastjsonMain {
 
     /**
-     *
      * 1.fastjson的使用
      * 2.大文件的处理
-     *
      */
+    public static void main(String[] args) {
+
+    }
 }

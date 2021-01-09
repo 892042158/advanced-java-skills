@@ -83,13 +83,28 @@ public class FastJsonMainTest {
     }
 
     @Test
-
     public void toJSONNoFeatures() {
         fastJsonModel.setTestString("obj2String config");
         String value = JSON.toJSONString(fastJsonModel, config);
         log.info("toJSONNoFeatures:{}", value);
     }
-
+    @Test
+    public void testDate() throws Exception {
+        // 日期不做处理
+        System.out.println(JSON.toJSONString(fastJsonModel));
+        // 序列化日期为ISO-8601日期格式
+        System.out.println(JSON.toJSONString(fastJsonModel, SerializerFeature.UseISO8601DateFormat));
+        // 序列化日期为指定格式
+        System.out.println(JSON.toJSONStringWithDateFormat(fastJsonModel, "yyyy-MM-dd HH:mm:ss.SSS"));
+        // 修改全局的全局日期格式
+//        JSON.DEFFAULT_DATE_FORMAT = "yyyy-MM-dd";
+        JSON.DEFFAULT_DATE_FORMAT = "yyyy-MM-dd HH:mm:ss";
+        // 使用默认的全局日期格式
+        System.out.println(JSON.toJSONString(fastJsonModel, SerializerFeature.WriteDateUseDateFormat));
+        // 使用@JSONField配置
+        System.out.println(JSON.toJSONString(fastJsonModel));
+        System.out.println();
+    }
     /**
      * public @interface JSONField {
      *     // 配置序列化和反序列化的顺序，1.1.42版本之后才支持
