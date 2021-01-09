@@ -38,12 +38,10 @@ public class FreemarkerMainTest {
                 template.process(root, writer);
                 System.out.println(writer.toString());
             } catch (TemplateException e) {
-                // TODO Auto-generated catch block
                 e.printStackTrace();
             }
 
         } catch (IOException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         }
     }
