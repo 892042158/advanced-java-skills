@@ -1,4 +1,4 @@
-package top.xmindguoguo.java.stream;
+package top.xmindguoguo.java8.stream;
 
 /**
  * @ClassName: LambdaMain
@@ -7,5 +7,5 @@ package top.xmindguoguo.java.stream;
  * @Date: 2021/1/1 22:49
  * @Version: v1.0
  */
-public class LambdaMain {
+public class StreamMain {
 }

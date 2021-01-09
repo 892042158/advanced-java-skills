@@ -1,4 +1,4 @@
-package top.xmindguoguo.java.file;
+package top.xmindguoguo.java8.file;
 
 /**
  * @ClassName: FilePathMain

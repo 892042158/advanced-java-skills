@@ -1,4 +1,4 @@
-package top.xmindguoguo.java.stream;
+package top.xmindguoguo.java8.stream;
 
 /**
  * @ClassName: LambdaMainTest

@@ -1,4 +1,4 @@
-package top.xmindguoguo.java;
+package top.xmindguoguo.java8;
 
 /**
  * @ClassName: JacksonMain
@@ -7,7 +7,7 @@ package top.xmindguoguo.java;
  * @Date: 2020/12/20 1:34
  * @Version: v1.0
  */
-public class JavaMain {
+public class JavaMainTest {
 
 
 }
