@@ -17,6 +17,13 @@
         <module>commons-fileupload-demo</module>
         <module>dom4j-demo</module>
         <module>fastjson-demo</module>
+        <module>java-jdbc-demo</module>
+        <module>useragentutils-demo</module>
+        <module>beetl-demo</module>
+        <module>freemarker-demo</module>
+        <module>apache-commons-demo</module>
+        <module>quartz-demo</module>
+        <module>hutool-demo</module>
     </modules>
 
 

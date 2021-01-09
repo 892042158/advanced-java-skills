@@ -1,4 +1,4 @@
-package top.xmindguoguo.java8;
+package top.xmindguoguo.other;
 
 import java.io.File;
 import java.io.FileFilter;

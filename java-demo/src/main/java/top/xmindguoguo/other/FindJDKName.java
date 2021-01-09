@@ -1,4 +1,4 @@
-package top.xmindguoguo.java8;
+package top.xmindguoguo.other;
 
 import org.apache.commons.collections.map.MultiValueMap;
 import org.apache.commons.io.FileUtils;

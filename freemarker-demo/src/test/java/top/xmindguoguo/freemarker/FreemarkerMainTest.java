@@ -12,7 +12,6 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * @ClassName: FreemarkerMainTest
  * @author: 于国帅
  * @Description:
  * @Date: 2021/1/9 2:25
