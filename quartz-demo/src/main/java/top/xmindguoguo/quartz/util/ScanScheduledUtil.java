@@ -1,7 +1,7 @@
 package top.xmindguoguo.quartz.util;
 
-import common.utils.ClassUtil;
 import lombok.extern.slf4j.Slf4j;
+import top.xmindguoguo.common.utils.model.ClassUtil;
 
 import java.util.ArrayList;
 import java.util.HashMap;
