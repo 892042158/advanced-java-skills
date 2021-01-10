@@ -24,6 +24,8 @@
         <module>apache-commons-demo</module>
         <module>quartz-demo</module>
         <module>hutool-demo</module>
+        <module>pinyin4j-demo</module>
+        <module>shiro-demo</module>
     </modules>
 
 
