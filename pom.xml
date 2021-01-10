@@ -28,6 +28,7 @@
         <module>shiro-demo</module>
         <module>tess4j-demo</module>
         <module>joda-time-demo</module>
+        <module>jsoup-demo</module>
     </modules>
 
 

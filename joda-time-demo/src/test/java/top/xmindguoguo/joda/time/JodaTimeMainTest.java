@@ -9,5 +9,8 @@ import static org.junit.Assert.*;
  * @Version: v1.0
  */
 public class JodaTimeMainTest {
+    public static void main(String[] args) {
+
+    }
 
 }
