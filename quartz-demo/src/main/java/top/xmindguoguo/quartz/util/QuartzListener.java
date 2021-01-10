@@ -1,9 +1,9 @@
 package top.xmindguoguo.quartz.util;
 
-import common.utils.ClassUtil;
 import org.quartz.JobExecutionContext;
 import org.quartz.JobExecutionException;
 import org.quartz.JobListener;
+import top.xmindguoguo.common.utils.model.ClassUtil;
 
 import java.util.Date;
 

@@ -1,8 +1,8 @@
 package top.xmindguoguo.quartz;
 
-import common.utils.pinyin.PinyinUtil;
 import org.apache.commons.lang.RandomStringUtils;
-import study.test.demo.quartz.util.*;
+import top.xmindguoguo.pinyin4j.ext.PinyinUtil;
+import top.xmindguoguo.quartz.util.*;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.Date;
@@ -12,7 +12,7 @@ public class TestCronTask {
 
         /**
          * 测试同一个cron表达式的任务是否能够一起执行
-         * 
+         *
          */
         String cronExpression = "0 0/1 * * * ? "; // 每分钟执行一次
 
