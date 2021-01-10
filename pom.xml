@@ -26,6 +26,7 @@
         <module>hutool-demo</module>
         <module>pinyin4j-demo</module>
         <module>shiro-demo</module>
+        <module>tess4j-demo</module>
     </modules>
 
 
