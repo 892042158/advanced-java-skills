@@ -12,23 +12,22 @@
         <module>skills-core</module>
         <module>jackson-demo</module>
         <module>java-demo</module>
-        <module>common-utils</module>
+        <module>skills-common</module>
         <module>webmagic-demo</module>
-        <module>commons-fileupload-demo</module>
         <module>dom4j-demo</module>
-        <module>fastjson-demo</module>
         <module>java-jdbc-demo</module>
         <module>useragentutils-demo</module>
         <module>beetl-demo</module>
         <module>freemarker-demo</module>
-        <module>apache-commons-demo</module>
         <module>quartz-demo</module>
         <module>hutool-demo</module>
         <module>pinyin4j-demo</module>
-        <module>shiro-demo</module>
         <module>tess4j-demo</module>
         <module>joda-time-demo</module>
         <module>jsoup-demo</module>
+        <module>apache-demo</module>
+        <module>google-demo</module>
+        <module>alibaba-demo</module>
     </modules>
 
 
