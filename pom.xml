@@ -28,6 +28,7 @@
         <module>apache-demo</module>
         <module>google-demo</module>
         <module>alibaba-demo</module>
+        <module>spring-demo</module>
     </modules>
 
 
