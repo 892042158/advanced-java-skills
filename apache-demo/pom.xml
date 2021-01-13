@@ -16,6 +16,7 @@
         <module>apache-commons-demo</module>
         <module>httpclient-demo</module>
         <module>shiro-demo</module>
+        <module>poi-demo</module>
 
     </modules>
 
