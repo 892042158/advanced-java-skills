@@ -20,6 +20,8 @@
         <module>commons-io-demo</module>
         <module>commons-dbutils-demo</module>
         <module>commons-validator-demo</module>
+        <module>commons-exec-demo</module>
+        <module>commons-configuration-demo</module>
     </modules>
     <artifactId>apache-commons-demo</artifactId>
     <dependencies>
