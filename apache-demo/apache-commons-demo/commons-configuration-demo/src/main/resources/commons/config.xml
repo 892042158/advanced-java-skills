@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Students>
+	<boy>tom</boy>
+	<student id="1">
+		<name go="common1">lily</name>
+		<age>20</age>
+	</student>
+	<student id="2">
+		<name go="common2">lucy</name>
+		<age>30</age>
+	</student>
+	<title>abc,cbc,bbc,bbs</title>
+	<ball size="20">pingpang</ball>
+</Students>
