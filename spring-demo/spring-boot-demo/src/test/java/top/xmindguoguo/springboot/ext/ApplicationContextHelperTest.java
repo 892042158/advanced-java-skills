@@ -1,16 +1,14 @@
-package top.xmindguoguo.skills.demo.springboot.ext;
+package top.xmindguoguo.springboot.ext;
 
 import org.junit.Test;
 
 /**
- * @ClassName: ApplicationContextHelperTest
  * @author: 于国帅
  * @Description:
- * @Date: 2020/12/13 16:33
+ * @Date: 2021/1/16 0:00
  * @Version: v1.0
  */
 public class ApplicationContextHelperTest {
-
     @Test
     public void getApplicationContext() {
     }

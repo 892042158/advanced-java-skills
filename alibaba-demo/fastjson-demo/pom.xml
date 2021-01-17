@@ -10,10 +10,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>fastjson-demo</artifactId>
-    <modules>
-        <module>fastjson-demo</module>
 
-    </modules>
     <dependencies>
         <!-- 包含通用需要引入的jar-->
         <dependency>

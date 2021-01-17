@@ -1,10 +1,10 @@
-package top.xmindguoguo.skills.demo.springboot.org.springframework.core.env;
+package org.springframework.core.env;
 
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.core.env.Environment;
-import top.xmindguoguo.skills.demo.springboot.ext.ApplicationContextHelper;
-import top.xmindguoguo.skills.ApplicationSuperTest;
+import top.xmindguoguo.springboot.ApplicationSuperTest;
+import top.xmindguoguo.springboot.ext.ApplicationContextHelper;
+
 
 /**
  * @ClassName: EnvironmentCapableTest

@@ -1,9 +1,8 @@
-package top.xmindguoguo.skills.demo.springboot.org.springframework.boot;
+package org.springframework.boot;
 
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.ApplicationArguments;
-import top.xmindguoguo.skills.ApplicationSuperTest;
+import top.xmindguoguo.springboot.ApplicationSuperTest;
 
 
 /**
