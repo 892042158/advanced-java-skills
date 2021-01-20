@@ -14,7 +14,8 @@
     <modules>
         <module>spring-boot-demo</module>
         <module>spring-data-redis-demo</module>
-        <module>springmvc-demo</module>
+        <module>spring-mvc-demo</module>
+        <module>spring-aop-demo</module>
     </modules>
 
     <dependencies>

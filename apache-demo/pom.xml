@@ -17,6 +17,7 @@
         <module>httpclient-demo</module>
         <module>shiro-demo</module>
         <module>poi-demo</module>
+        <module>velocity-demo</module>
 
     </modules>
 
