@@ -15,7 +15,7 @@ import org.springframework.test.context.junit4.SpringRunner;
  * @Version: v1.0
  */
 @RunWith(SpringRunner.class)
-@SpringBootTest
+@SpringBootTest(classes = SpringBootMain.class)
 @Slf4j
 public class ApplicationSuperTest {
 

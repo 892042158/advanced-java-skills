@@ -19,6 +19,8 @@ import javax.validation.constraints.Email;
  * @Version: v1.0
  * <p>
  * springmvc 验证相关的例子
+ * @see https://www.cnblogs.com/mr-yang-localhost/p/7812038.html
+ * @see https://blog.csdn.net/liyanqiang19/article/details/107318650/
  */
 @RestController
 @RequestMapping("/validatorDemo")
