@@ -1,4 +1,4 @@
-package top.xmindguoguo.springmvc;
+package top.xmindguoguo.aop;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -12,9 +12,9 @@ import org.springframework.context.ApplicationContext;
  * @Version: v1.0
  */
 @SpringBootApplication
-public class SpringMvcMain {
+public class SpringAopMain {
     public static void main(String[] args) {
-            ApplicationContext ctx = SpringApplication.run(SpringMvcMain.class, args);
+            ApplicationContext ctx = SpringApplication.run(SpringAopMain.class, args);
 //        System.setProperty("tomcat.util.http.parser.HttpParser.requestTargetAllow", "|{}");
     }
 }
