@@ -18,4 +18,5 @@ public class SpringMvcDemoController {
         //todo  启动的时候显示加载的springmv的url
         return ResponseEntity.ok("hi SpringMvcDemo!");
     }
+
 }

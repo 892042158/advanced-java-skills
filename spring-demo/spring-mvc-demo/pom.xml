@@ -47,4 +47,29 @@
             <artifactId>spring-boot-starter-aop</artifactId>
         </dependency>
     </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>2.2.12.RELEASE</version>
+                <executions>
+                    <execution>
+                        <id>repackage</id>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                    </execution>
+
+                </executions>
+                <configuration>
+                    <!--                    <fork>true</fork>
+                                        <addResources>true</addResources>-->
+                    <mainClass>top.xmindguoguo.springmvc.SpringMvcMain</mainClass>
+                </configuration>
+
+            </plugin>
+        </plugins>
+    </build>
 </project>
