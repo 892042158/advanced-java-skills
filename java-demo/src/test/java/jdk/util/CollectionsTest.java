@@ -78,7 +78,7 @@ public class CollectionsTest {
 
     /**
      * 对数据进行随机排序
-     * 
+     *
      * @Title shuffle
      * @author 于国帅
      * @date 2019年1月10日 下午2:52:03 void
@@ -341,10 +341,19 @@ public class CollectionsTest {
 
     // unmodifiable 不可修改的集合
 
+    /**
+     * @see https://blog.csdn.net/weixin_39992480/article/details/100046941
+     */
+    @Test
+    public void unmodifiableMap() {
+
+
+    }
     // synchronized 线程安全的集合
+
 }
 
-/* 这里偷个懒，用lombok注解生成实体类getset等一些基本方法 */
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor

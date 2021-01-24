@@ -3,24 +3,13 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>advanced-java-skills</artifactId>
+        <artifactId>spring-demo</artifactId>
         <groupId>top.xmindguoguo.skills</groupId>
         <version>1.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>spring-demo</artifactId>
-    <packaging>pom</packaging>
-    <modules>
-        <module>spring-boot-demo</module>
-        <module>spring-data-redis-demo</module>
-        <module>spring-mvc-demo</module>
-        <module>spring-aop-demo</module>
-        <module>spring-web-demo</module>
-        <module>spring-beans-demo</module>
-        <module>spring-core-demo</module>
-    </modules>
-
+    <artifactId>spring-beans-demo</artifactId>
     <dependencies>
 
         <!-- 包含通用需要引入的jar-->
@@ -31,21 +20,16 @@
         </dependency>
 
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter</artifactId>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-beans</artifactId>
+            <version>5.2.12.RELEASE</version>
         </dependency>
 
         <dependency>
             <groupId>org.springframework</groupId>
-            <artifactId>spring-context</artifactId>
+            <artifactId>spring-core</artifactId>
             <version>5.2.7.RELEASE</version>
-            <scope>compile</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
         </dependency>
     </dependencies>
+
 </project>

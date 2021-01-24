@@ -25,4 +25,6 @@ public class MessageFormatTest {
         log.info(logFormat, "messageFormat1", "messageFormat2", "messageFormat3");
 
     }
+
+
 }
