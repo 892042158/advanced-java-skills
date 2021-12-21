@@ -29,6 +29,7 @@
         <module>google-demo</module>
         <module>alibaba-demo</module>
         <module>spring-demo</module>
+        <module>okhttp-demo</module>
     </modules>
 
 
