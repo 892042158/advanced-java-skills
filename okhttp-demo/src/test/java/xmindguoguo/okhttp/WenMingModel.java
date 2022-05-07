@@ -44,8 +44,8 @@ public class WenMingModel {
     private long r; //繁荣度
     @ExcelProperty(value ="领主评分",index = 5)
     private long s; //领主评分
-    @ExcelProperty(value ="time",index = 0)
-    private long t;
+    @ExcelProperty(value ="最新数据统计时间",index = 0)
+    private String t;
     @ExcelProperty(value ="联盟活跃",index = 6)
     private long aa; //联盟活跃
     @ExcelProperty(value ="攻占据点",index = 8)
